@@ -4,7 +4,7 @@ const con = require('../connection/mysql');
 const addVeiculo = (req, res) => {
     if (req.body != null && req.body.placa != null && req.body.modelo != null && req.body.capacidade != null) {
         const { placa, modelo, capacidade } = req.body;
-        con.query('INSERT INTO veiculo (placa, modelo, capacidade) VALUES (?, ?, ?, ?)', [placa, modelo, capacidade], (err, result) => {
+        con.query('INSERT INTO veiculo (placa, modelo, capacidade) VALUES (?, ?, ?)', [placa, modelo, capacidade], (err, result) => {
             if (err) {
                 res.status(500).json(err);
             } else {
@@ -16,6 +16,17 @@ const addVeiculo = (req, res) => {
     }
 }
 
+//CRUD - READ
+const getVeiculos = (req, res) => {
+    con.query('SELECT * FROM veiculo', (err, result) => {
+        if (err) {
+            res.status(500).send('Erro ao listar veiculos');
+        }
+        res.json(result);
+    });
+}
+
 module.exports = {
-    addVeiculo
+    addVeiculo,
+    getVeiculos
 }

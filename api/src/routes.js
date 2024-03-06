@@ -12,5 +12,6 @@ routes.post('/clientes', Cliente.addCliente);
 routes.get('/clientes', Cliente.getClientes);
 
 routes.post('/veiculos', Veiculo.addVeiculo);
+routes.get('/veiculos', Veiculo.getVeiculos);
 
 module.exports = routes;
