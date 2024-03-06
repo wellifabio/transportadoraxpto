@@ -20,10 +20,14 @@
 - 1 Faça download deste repositório
 - 2 Abra com VsCode
 - 3 Abra um terminal **cmd** ou **bash**
-- 4 Navegue até a pasta **./api** e instale as dependências usando **npm** e execute com **nodemon** ou **node**
+- 4 Navegue até a pasta **./api** e instale as dependências usando **npm**
 ```bahs
 cd api
 npm i
-npx nodemon
 ```
-- 
+- 5 Abra o XAMPP e clique em **Start** nos serviços Apache e MySQL, depois abra o **Shell** e acesse o MariaDB.
+```bash
+mysql -u root
+```
+6 - Copie o script de criação do banco de dados e cole no shell do MariaDB (./bd/script.sql), copie também os dados de teste que estão na pasta (./testes/populacaobd.sql)
+7 - Abra o insomnia e importe o arquivo de teste (./teste/insomnia.json)
