@@ -2,7 +2,7 @@ const con = require('../connection/mysql');
 
 //CRUD - CREATE
 const addCliente = (req, res) => {
-    try {
+    if(req.body!=null && req.body.nome!=null && req.body.endereco!=null && req.body.telefone!=null && req.body.email!=null){
         const { nome, endereco, telefone, email } = req.body;
         con.query('INSERT INTO cliente (nome, endereco, telefone, email) VALUES (?, ?, ?, ?)', [nome, endereco, telefone, email], (err, result) => {
             if (err) {
@@ -10,8 +10,8 @@ const addCliente = (req, res) => {
             }
             res.status(201).send('Cliente adicionado com sucesso');
         });
-    } catch (error) {
-        res.status(500).send('Erro ao adicionar cliente');
+    } else {
+        res.status(500).send('Favor enviar todos os campos obrigatórios');
     }
 }
 
