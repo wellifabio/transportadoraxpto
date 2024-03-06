@@ -1,2 +1,29 @@
-# transportadoraxpto
-Projeto full stack, exemplo MVC, CRUD, API
+# Transportadora XPTO
+## Objetivo: Projeto full stack, exemplo de conceitos como:
+- MVC (Model View Controller)
+- CRUD (Create Read Uptade Delete)
+- API (Application Programming Interface)
+- Testes unitários
+
+## Tecnologias
+- [XAMPP](https://www.apachefriends.org/pt_br/index.html) MySQL, MariaDB - Banco de dados Relacional
+- [NodeJS](https://nodejs.org/en) Framework para desenvolvimento Back-End
+- [VsCode](https://code.visualstudio.com/) IDE (Ambiente integrado de desenvolvimento)
+- [Insomnia](https://insomnia.rest/download) Ferramenta para testes unitários da API BackEnd
+
+## Dependências
+- mysql
+- express
+- cors
+
+## Para testar
+- 1 Faça download deste repositório
+- 2 Abra com VsCode
+- 3 Abra um terminal **cmd** ou **bash**
+- 4 Navegue até a pasta **./api** e instale as dependências usando **npm** e execute com **nodemon** ou **node**
+```bahs
+cd api
+npm i
+npx nodemon
+```
+- 
