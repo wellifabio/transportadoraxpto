@@ -10,6 +10,9 @@ routes.get('/', (req, res) => {
 
 routes.post('/clientes', Cliente.addCliente);
 routes.get('/clientes', Cliente.getClientes);
+routes.get('/clientes/:id', Cliente.getClientes);
+routes.put('/clientes', Cliente.updateCliente);
+routes.delete('/clientes/:id', Cliente.deleteCliente);
 
 routes.post('/veiculos', Veiculo.addVeiculo);
 routes.get('/veiculos', Veiculo.getVeiculos);
