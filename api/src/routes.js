@@ -7,6 +7,7 @@ routes.get('/', (req, res) => {
     res.json("API Transportadora XPTO 1.0")
 });
 
+routes.post('/clientes', Cliente.addClientes);
 routes.get('/clientes', Cliente.getClientes);
 
 module.exports = routes;
