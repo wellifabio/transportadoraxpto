@@ -16,5 +16,8 @@ routes.delete('/clientes/:id', Cliente.deleteCliente);
 
 routes.post('/veiculos', Veiculo.addVeiculo);
 routes.get('/veiculos', Veiculo.getVeiculos);
+routes.get('/veiculos/:placa', Veiculo.getVeiculos);
+routes.put('/veiculos', Veiculo.updateVeiculo);
+routes.delete('/veiculos/:placa', Veiculo.deleteVeiculo);
 
 module.exports = routes;
