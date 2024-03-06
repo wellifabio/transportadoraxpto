@@ -30,4 +30,12 @@ npm i
 mysql -u root
 ```
 - 6 Copie o script de criação do banco de dados e cole no shell do MariaDB (./bd/script.sql), copie também os dados de teste que estão na pasta (./testes/populacaobd.sql)
-- 7 Abra o insomnia e importe o arquivo de teste (./teste/insomnia.json)
+- 7 Abra o insomnia e **importe** o arquivo de testes (./testes/insomnia.json)
+- 8 Execute a API Back-End
+```bash
+npx nodemon
+```
+- 9 Execute os CRUD testes a partir do insomnia
+
+## Atividade
+- Desenvolva os CRUDs das entidades: Funcionário, Entrega, Rota e Pedido
